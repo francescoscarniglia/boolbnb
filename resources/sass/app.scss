@@ -4,9 +4,17 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-//Partials
+// Partials
 @import 'partials/common';
 @import 'partials/breakpoints';
 @import 'partials/navbar';
 @import 'partials/show-place';
 @import 'partials/footer';
+
+// Login and Register
+@import 'partials/login-register/log-reg__common';
+@import 'partials/login-register/login';
+@import 'partials/login-register/register';
+
+// Inbox
+@import 'partials/inbox/inbox';

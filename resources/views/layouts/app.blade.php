@@ -1,9 +1,5 @@
 @include('shared.header')
 
+    @yield('content')
     
-    <main class="container">
-        @yield('content')
-    </main>
-
-
 @include('shared.footer')
