@@ -59,10 +59,10 @@
                 <div class="place-show__bottom__infos">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 col-md-12 col-sm-12">
-                                <div id="mapid" class="place-show__bottom__infos__leafmap rounded-lg"></div>
+                            <div class="col-lg-6">
+                                <div id="mapid" class="place-show__bottom__infos__leafmap" style="height: 300px"></div>
                             </div> 
-                            <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="col-lg-6">
                                 <h5 class="text-center">Contatta il venditore</h5>
                                 @include('shared.sendMessageArea')
                             </div>
@@ -76,10 +76,10 @@
             <div class="place-show__bottom__infos">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-12 col-sm-12">
-                            <div id="mapid" class="place-show__bottom__infos__leafmap rounded-lg"></div>
+                        <div class="col-lg-6">
+                            <div id="mapid" class="place-show__bottom__infos__leafmap" style="height: 300px"></div>
                         </div> 
-                        <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="col-lg-6">
                             <h5 class="place-show__bottom__infos__title text-center">Contatta il venditore</h5>
                             @include('shared.sendMessageArea')
                         </div>
