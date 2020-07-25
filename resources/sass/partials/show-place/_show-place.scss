@@ -1,18 +1,25 @@
 .place-show {
     color: $u-black;
     &__top {
-        background: #ededed;
-        padding: 80px 0 50px;
+        //background: #f7f7f7;
+        background-image: url('');
+        padding: 80px 0 30px;
         border-bottom: 2px solid $u-green;
-        &__description,
-        &__list {
-            list-style-position: inside;
-            font-size: 14px;
-        }
-        &__amenities {
-            & .badge-info {
-                background-color: $u-purple;
-                color: $u-green;
+        &__info {
+            &__description,
+            &__list {
+                padding-bottom: 15px;
+                border-bottom: 1px solid $u-green;
+                font-size: 14px;
+            }
+            &__list {
+                list-style-position: inside;
+            }
+            &__amenities {
+                & .badge-info {
+                    background-color: $u-purple;
+                    color: $u-green;
+                }
             }
         }
         &__price {
@@ -20,11 +27,24 @@
         }
     }
     &__bottom {
-        background-color: $u-purple;
+        &__infos {
+            padding: 50px 0;
+            &__title {
+                font-size: 28px;
+                margin-bottom: 30px;
+                @include mobile {
+                    padding-top: 30px;
+                }
+                @include tablet {
+                    padding-top: 30px;
+                }
+            }
+        }
     }
     &__stats {
         padding: 50px 0 50px;
         border-top: 2px solid $u-purple;
+        border-bottom: 2px solid $u-orange;
         background: $u-green-a;
         &__totals__msg {
             color: $u-purple;
@@ -34,3 +54,36 @@
         }
     }
 }
+
+.place-show__bottom__infos__leafmap {
+    @include mobile {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    @include tablet {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        height: 100%;
+    }
+    @include large-desktop {
+        height: 100%;
+    }
+}
+
+.place-show__top__img {
+    @include mobile {
+        margin-bottom: 30px;
+    }
+    @include tablet {
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        margin-bottom: 30px;
+    }
+    @include large-desktop {
+        margin-bottom: 30px;
+    }
+}
+

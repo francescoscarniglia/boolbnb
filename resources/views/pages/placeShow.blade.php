@@ -15,21 +15,19 @@
     <div class="place-show__top">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12 order-2 order-lg-1">
-                    <h3 class="place-show__top__title text-center">{{$place->title}}</h3>
-                    <h5 class="place-show__top__position text-center">{{$place->address}} - {{$place->city}}</h5>
-                    <p class="place-show__top__description">{{$place->description}}</p>
-                    <hr>
+                <div class="place-show__top__info col-lg-6 col-md-12 col-sm-12 order-2 order-lg-1">
+                    <h3 class="place-show__top__info__title text-center mt-3">{{$place->title}}</h3>
+                    <h5 class="place-show__top__info__position text-center">{{$place->address}} - {{$place->city}}</h5>
+                    <p class="place-show__top__info__description">{{$place->description}}</p>
                     <h6>Caratteristiche:</h6>
-                    <ul class="place-show__top__list">
-                        <li class="place-show__top__list__info">Numero stanze: {{$place->num_rooms}}</li>
-                        <li class="place-show__top__list__info">Posti letto: {{$place->num_beds}}</li>
-                        <li class="place-show__top__list__info">Bagni: {{$place->num_baths}}</li>
-                        <li class="place-show__top__list__info">Dimensioni: {{$place->square_m}}m²</li>
+                    <ul class="place-show__top__info__list">
+                        <li class="place-show__top__info__list__item">Numero stanze: {{$place->num_rooms}}</li>
+                        <li class="place-show__top__info__list__item">Posti letto: {{$place->num_beds}}</li>
+                        <li class="place-show__top__info__list__item">Bagni: {{$place->num_baths}}</li>
+                        <li class="place-show__top__info__list__item">Dimensioni: {{$place->square_m}}m²</li>
                     </ul>
-                    <hr>
                     {{-- Servizi --}}
-                    <div class="place-show__top__amenities d-flex align-items-center">
+                    <div class="place-show__top__info__amenities d-flex align-items-center">
                         <span class="d-inline-block mr-2">Servizi inclusi</span>
                         @forelse ( $place->amenities as $amenity )
                             <span class="badge badge-pill mr-1">{{ $amenity->name }}</span>
@@ -42,7 +40,7 @@
                     <input type="hidden" name="long" id="long" value="{{ $place->long }}">
                 </div>
     
-                <div class="col-lg-6 col-md-12 col-sm-12 order-1 order-lg-2 mb-3 mb-lg-0">
+                <div class="place-show__top__img col-lg-6 col-md-12 col-sm-12 order-1 order-lg-2 text-center">
                     @if(!empty($place->place_img))
                         <img src="{{asset('storage/' . $place->place_img)}}" class="img-fluid rounded" alt="immaginecasa" style="max-width: 100%; height: auto;">
                     @else
@@ -58,14 +56,16 @@
             @if ($place->user_id === $user->id)
                 <div id="mapid" class="rounded-lg" style="height: 300px"></div>
             @else
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-6 col-md-12 col-sm-12">
-                            <div id="mapid" class="rounded-lg" style="height: 300px"></div>
-                        </div> 
-                        <div class="col-lg-6 col-md-12 col-sm-12">
-                            <h5 class="text-center">Contatta il venditore</h5>
-                            @include('shared.sendMessageArea')
+                <div class="place-show__bottom__infos">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div id="mapid" class="place-show__bottom__infos__leafmap rounded-lg"></div>
+                            </div> 
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <h5 class="text-center">Contatta il venditore</h5>
+                                @include('shared.sendMessageArea')
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,14 +73,16 @@
         @endauth
 
         @guest
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div id="mapid" class="rounded-lg" style="height: 300px"></div>
-                    </div> 
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h5 class="text-center">Contatta il venditore</h5>
-                        @include('shared.sendMessageArea')
+            <div class="place-show__bottom__infos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div id="mapid" class="place-show__bottom__infos__leafmap rounded-lg"></div>
+                        </div> 
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <h5 class="place-show__bottom__infos__title text-center">Contatta il venditore</h5>
+                            @include('shared.sendMessageArea')
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,12 +95,12 @@
                 <div class="container">
                     <h2 class="place-show__stats__title text-center">Area Statistiche <i class="fas fa-chart-line"></i></h2><hr>
                     <div class="row d-flex align-items-center">
-                        <div class="place-show__stats__totals col-lg-4 col-md-4 col-sm-12">
+                        <div class="place-show__stats__totals col-lg-3 col-md-3 col-sm-12">
                             <h3 class="place-show__stats__totals__msg text-lg-right text-md-right text-sm-center">Totale contatti:<br><span class="h2 d-flex align-items-center justify-content-end" style="font-size: 50px; font-weight: 700;"><i class="far fa-envelope" style="margin-right: 25px; font-size: 30px"></i>{{$totMessages}}</span></h3>
                             <hr>
                             <h3 class="place-show__stats__totals__visits text-lg-right text-md-right text-sm-center">Totale visite:<br><span class="h2 d-flex align-items-center justify-content-end" style="font-size: 50px; font-weight: 700;"><i class="far fa-eye" style="margin-right: 25px; font-size: 30px"></i>{{$totVisits}}</span></h3>
                         </div>
-                        <div class="place-show__stats__graph col-lg-8 col-md-8 col-sm-12">
+                        <div class="place-show__stats__graph col-lg-9 col-md-9 col-sm-12">
                             <canvas id="graph" class=""></canvas>
                         </div>
                     </div>
