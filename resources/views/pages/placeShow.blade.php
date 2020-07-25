@@ -15,7 +15,7 @@
     <div class="place-show__top">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="place-show__top__info col-lg-6 col-md-12 col-sm-12 order-2 order-lg-1">
+                <div class="place-show__top__info col-lg-6 order-2 order-lg-1">
                     <h3 class="place-show__top__info__title text-center mt-3">{{$place->title}}</h3>
                     <h5 class="place-show__top__info__position text-center">{{$place->address}} - {{$place->city}}</h5>
                     <p class="place-show__top__info__description">{{$place->description}}</p>
@@ -40,9 +40,9 @@
                     <input type="hidden" name="long" id="long" value="{{ $place->long }}">
                 </div>
     
-                <div class="place-show__top__img col-lg-6 col-md-12 col-sm-12 order-1 order-lg-2 text-center">
+                <div class="place-show__top__img col-lg-6 order-1 order-lg-2 text-center">
                     @if(!empty($place->place_img))
-                        <img src="{{asset('storage/' . $place->place_img)}}" class="img-fluid rounded" alt="immaginecasa" style="max-width: 100%; height: auto;">
+                        <img src="{{asset('storage/' . $place->place_img)}}" class="img-fluid rounded" alt="immaginecasa">
                     @else
                         <div class="no-image text-danger">No image</div>
                     @endif
@@ -54,13 +54,13 @@
     <div class="place-show__bottom">
         @auth
             @if ($place->user_id === $user->id)
-                <div id="mapid" class="rounded-lg" style="height: 400px"></div>
+                <div id="mapid" style="height: 350px"></div>
             @else
                 <div class="place-show__bottom__infos">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div id="mapid" class="place-show__bottom__infos__leafmap" style="height: 300px"></div>
+                            <div class="col-lg-6 place-show__bottom__infos__leafmap " style="min-height: 200px">
+                                <div id="mapid" style="height: 100%"></div>
                             </div> 
                             <div class="col-lg-6">
                                 @include('shared.sendMessageArea')
@@ -75,8 +75,8 @@
             <div class="place-show__bottom__infos">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div id="mapid" class="place-show__bottom__infos__leafmap" style="height: 300px"></div>
+                        <div class="col-lg-6 place-show__bottom__infos__leafmap" style="min-height: 200px">
+                            <div id="mapid" style="height: 100%"></div>
                         </div> 
                         <div class="col-lg-6">
                             @include('shared.sendMessageArea')
@@ -93,12 +93,20 @@
                 <div class="container">
                     <h2 class="place-show__stats__title text-center">Area Statistiche <i class="fas fa-chart-line"></i></h2><hr>
                     <div class="row d-flex align-items-center">
-                        <div class="place-show__stats__totals col-lg-3 col-md-3 col-sm-12">
-                            <h3 class="place-show__stats__totals__msg text-lg-right text-md-right text-sm-center">Totale contatti:<br><span class="h2 d-flex align-items-center justify-content-end" style="font-size: 50px; font-weight: 700;"><i class="far fa-envelope" style="margin-right: 25px; font-size: 30px"></i>{{$totMessages}}</span></h3>
+                        <div class="place-show__stats__totals col-lg-3 col-md-3">
+                            <h3 class="place-show__stats__totals__msg text-lg-right text-md-right text-sm-center">Totale contatti:<br>
+                                <span class="place-show__stats__totals__msg__title d-flex align-items-center justify-content-end">
+                                    <i class="far fa-envelope"></i>{{$totMessages}}
+                                </span>
+                            </h3>
                             <hr>
-                            <h3 class="place-show__stats__totals__visits text-lg-right text-md-right text-sm-center">Totale visite:<br><span class="h2 d-flex align-items-center justify-content-end" style="font-size: 50px; font-weight: 700;"><i class="far fa-eye" style="margin-right: 25px; font-size: 30px"></i>{{$totVisits}}</span></h3>
+                            <h3 class="place-show__stats__totals__visits text-lg-right text-md-right text-sm-center">Totale visite:<br>
+                                <span class="place-show__stats__totals__visits__title d-flex align-items-center justify-content-end">
+                                    <i class="far fa-eye"></i>{{$totVisits}}
+                                </span>
+                            </h3>
                         </div>
-                        <div class="place-show__stats__graph col-lg-9 col-md-9 col-sm-12">
+                        <div class="place-show__stats__graph col-lg-9 col-md-9">
                             <canvas id="graph" class=""></canvas>
                         </div>
                     </div>

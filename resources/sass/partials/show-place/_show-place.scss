@@ -43,36 +43,37 @@
     }
     &__stats {
         padding: 50px 0 50px;
-        border-top: 1px solid $u-purple;
+        border-top: 1px solid $u-orange;
         border-bottom: 1px solid $u-orange;
         background: $u-green-a;
         &__totals__msg {
             color: $u-purple;
+            &__title {
+                font-size: 40px;
+                font-weight: 700;
+                & i {
+                    margin-right: 25px;
+                    font-size: 30px;
+                }
+            }
         }
         &__totals__visits {
             color: $u-orange;
+            &__title {
+                font-size: 40px;
+                font-weight: 700;
+                & i {
+                    margin-right: 25px;
+                    font-size: 30px;
+                }
+            }
         }
-    }
-}
-
-.place-show__bottom__infos__leafmap {
-    @include mobile {
-        height: 300px;
-        margin-bottom: 30px;
-    }
-    @include tablet {
-        height: 300px;
-        margin-bottom: 30px;
-    }
-    @include desktop {
-        height: 100%;
-    }
-    @include large-desktop {
-        height: 100%;
     }
 }
 
 .place-show__top__img {
+    max-width: 100%;
+    height: auto;
     @include mobile {
         margin-bottom: 30px;
     }
