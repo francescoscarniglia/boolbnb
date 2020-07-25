@@ -2,9 +2,8 @@
     color: $u-black;
     &__top {
         //background: #f7f7f7;
-        background-image: url('');
         padding: 80px 0 30px;
-        border-bottom: 2px solid $u-green;
+        border-bottom: 1px solid $u-green;
         &__info {
             &__description,
             &__list {
@@ -30,10 +29,11 @@
         &__infos {
             padding: 50px 0;
             &__title {
-                font-size: 28px;
+                font-size: 24px;
+                margin-top: 30px;
                 margin-bottom: 30px;
                 @include mobile {
-                    padding-top: 30px;
+                    padding-top: 130px;
                 }
                 @include tablet {
                     padding-top: 30px;
@@ -43,8 +43,8 @@
     }
     &__stats {
         padding: 50px 0 50px;
-        border-top: 2px solid $u-purple;
-        border-bottom: 2px solid $u-orange;
+        border-top: 1px solid $u-purple;
+        border-bottom: 1px solid $u-orange;
         background: $u-green-a;
         &__totals__msg {
             color: $u-purple;

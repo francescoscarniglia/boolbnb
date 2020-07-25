@@ -30,12 +30,12 @@
                     <div class="place-show__top__info__amenities d-flex align-items-center">
                         <span class="d-inline-block mr-2">Servizi inclusi</span>
                         @forelse ( $place->amenities as $amenity )
-                            <span class="badge badge-pill mr-1">{{ $amenity->name }}</span>
+                            <span class="badge badge-pill badge-info mr-1">{{ $amenity->name }}</span>
                         @empty
                             <span class="badge badge-pill badge-info">Nessun servizio incluso</span>
                         @endforelse
                     </div>
-                    <h5 class="place-show__top__price text-lg-right text-md-right text-center my-3 h3 font-weight-bold">{{round($place->price)}}€ a notte</h5>
+                    <h5 class="place-show__top__price text-lg-right text-md-right text-center mt-3 h3 font-weight-bold">{{round($place->price)}}€ a notte</h5>
                     <input type="hidden" name="lat" id="lat" value="{{ $place->lat }}">
                     <input type="hidden" name="long" id="long" value="{{ $place->long }}">
                 </div>
@@ -54,7 +54,7 @@
     <div class="place-show__bottom">
         @auth
             @if ($place->user_id === $user->id)
-                <div id="mapid" class="rounded-lg" style="height: 300px"></div>
+                <div id="mapid" class="rounded-lg" style="height: 400px"></div>
             @else
                 <div class="place-show__bottom__infos">
                     <div class="container">
@@ -63,7 +63,6 @@
                                 <div id="mapid" class="place-show__bottom__infos__leafmap" style="height: 300px"></div>
                             </div> 
                             <div class="col-lg-6">
-                                <h5 class="text-center">Contatta il venditore</h5>
                                 @include('shared.sendMessageArea')
                             </div>
                         </div>
@@ -80,7 +79,6 @@
                             <div id="mapid" class="place-show__bottom__infos__leafmap" style="height: 300px"></div>
                         </div> 
                         <div class="col-lg-6">
-                            <h5 class="place-show__bottom__infos__title text-center">Contatta il venditore</h5>
                             @include('shared.sendMessageArea')
                         </div>
                     </div>

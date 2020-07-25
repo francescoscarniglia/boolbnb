@@ -10965,9 +10965,8 @@ a.text-dark:focus {
 }
 
 .place-show__top {
-  background-image: url("");
   padding: 80px 0 30px;
-  border-bottom: 2px solid #dfd68b;
+  border-bottom: 1px solid #dfd68b;
 }
 
 .place-show__top__info__description,
@@ -10995,13 +10994,14 @@ a.text-dark:focus {
 }
 
 .place-show__bottom__infos__title {
-  font-size: 28px;
+  font-size: 24px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
 @media (min-width: 576px) {
   .place-show__bottom__infos__title {
-    padding-top: 30px;
+    padding-top: 130px;
   }
 }
 
@@ -11013,8 +11013,8 @@ a.text-dark:focus {
 
 .place-show__stats {
   padding: 50px 0 50px;
-  border-top: 2px solid #664b87;
-  border-bottom: 2px solid #fea58d;
+  border-top: 1px solid #664b87;
+  border-bottom: 1px solid #fea58d;
   background: rgba(223, 214, 139, 0.8);
 }
 
