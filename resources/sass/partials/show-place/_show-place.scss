@@ -1,7 +1,36 @@
 .place-show {
     color: $u-black;
-    &__description,
-    &__list-info {
-        font-size: 14px;
+    &__top {
+        background: #ededed;
+        padding: 80px 0 50px;
+        border-bottom: 2px solid $u-green;
+        &__description,
+        &__list {
+            list-style-position: inside;
+            font-size: 14px;
+        }
+        &__amenities {
+            & .badge-info {
+                background-color: $u-purple;
+                color: $u-green;
+            }
+        }
+        &__price {
+            color: $u-orange;
+        }
+    }
+    &__bottom {
+        background-color: $u-purple;
+    }
+    &__stats {
+        padding: 50px 0 50px;
+        border-top: 2px solid $u-purple;
+        background: $u-green-a;
+        &__totals__msg {
+            color: $u-purple;
+        }
+        &__totals__visits {
+            color: $u-orange;
+        }
     }
 }

@@ -10942,13 +10942,65 @@ a.text-dark:focus {
 
 /* Large desktops (large desktops, 1200px and up) */
 
+.navbar {
+  color: royalblue;
+  font-weight: bold;
+  background-color: #dfd68b;
+}
+
+.navbar a {
+  color: #664b87;
+}
+
+.navbar a:hover {
+  color: rgba(102, 75, 135, 0.8);
+}
+
+.fas.fa-bars {
+  color: royalblue;
+}
+
 .place-show {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.place-show__description,
-.place-show__list-info {
+.place-show__top {
+  background: #ededed;
+  padding: 80px 0 50px;
+  border-bottom: 2px solid #dfd68b;
+}
+
+.place-show__top__description,
+.place-show__top__list {
+  list-style-position: inside;
   font-size: 14px;
+}
+
+.place-show__top__amenities .badge-info {
+  background-color: #664b87;
+  color: #dfd68b;
+}
+
+.place-show__top__price {
+  color: #fea58d;
+}
+
+.place-show__bottom {
+  background-color: #664b87;
+}
+
+.place-show__stats {
+  padding: 50px 0 50px;
+  border-top: 2px solid #664b87;
+  background: rgba(223, 214, 139, 0.8);
+}
+
+.place-show__stats__totals__msg {
+  color: #664b87;
+}
+
+.place-show__stats__totals__visits {
+  color: #fea58d;
 }
 
 footer {
