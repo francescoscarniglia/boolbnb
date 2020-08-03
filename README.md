@@ -50,6 +50,8 @@ HTML
 
 - Carbon
 
+![Desktop](public/images/desktop.gif)
+
 **Team di sviluppo:**
 
 - https://github.com/AndreaDeMartino 🧑‍💻
