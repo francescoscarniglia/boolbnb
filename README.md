@@ -54,7 +54,7 @@ HTML
 
 ![Desktop](public/images/desktop.gif)
 
-![Desktop](public/images/mobileGif.gif)
+![Mobile](public/images/mobileGif.gif)
 
 **Team di sviluppo:**
 
