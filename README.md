@@ -1,4 +1,6 @@
-BOOLBNB 
+**BOOLBNB**
+
+
 📂 Project Name: Boolbnb 📂
 Introduzione:
 
@@ -17,32 +19,32 @@ Inoltre, i proprietari di un appartamento possono decidere di pagare per sponsor
 💻 Linguaggi e Tecnologie utilizzate:
 HTML
 
-CSS
+- CSS
 
-SASS
+- SASS
 
-Bootstrap
+- Bootstrap
 
-JS
+- JS
 
-jQuery
+- jQuery
 
-Chart Js
+- Chart Js
 
-Leaflet Js
+- Leaflet Js
 
-Algolia (Places/Scout/Autocomplete/Instasearch Js)
+- Algolia (Places/Scout/Autocomplete/Instasearch Js)
 
-Braintree
+- Braintree
 
-Ajax
+- Ajax
 
-Handlebars
+- Handlebars
 
-MySql
+- MySql
 
-PHP
+- PHP
 
-Laravel
+- Laravel
 
-Carbon
+- Carbon
