@@ -1,8 +1,9 @@
 **BOOLBNB**
 
 
-📂 Project Name: Boolbnb 📂
-Introduzione:
+Project Name: Boolbnb
+
+> Introduzione:
 
 BoolBnB è una applicazione per trovare e gestire l’affitto di appartamenti.
 
