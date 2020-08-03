@@ -50,11 +50,10 @@ HTML
 
 - Carbon
 
->Anteprima Desktop
+>Anteprima Desktop / Mobile
 
 ![Desktop](public/images/desktop.gif)
 
->Anteprima Mobile
 ![Desktop](public/images/mobileGif.gif)
 
 **Team di sviluppo:**
