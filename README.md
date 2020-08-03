@@ -58,8 +58,8 @@ HTML
 
 **Team di sviluppo:**
 
-- https://github.com/AndreaDeMartino 🧑‍💻
-- https://github.com/flavio-pinto 🧑‍💻
-- https://github.com/fabiogadau 🧑‍💻
-- https://github.com/francescoscarniglia 🧑‍💻
-- https://github.com/SalvatoreLauriola 🧑‍💻
+- https://github.com/AndreaDeMartino 
+- https://github.com/flavio-pinto 
+- https://github.com/fabiogadau 
+- https://github.com/francescoscarniglia 
+- https://github.com/SalvatoreLauriola 
